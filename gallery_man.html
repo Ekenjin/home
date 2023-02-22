@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<title>Photo Gallery</title>
+<style type="text/css">
+<!--
+.name {
+	font-family: "굴림", "돋움", Seoul, "한강체";
+	font-size: 14px;
+	line-height: normal;
+	font-weight: bold;
+	text-decoration: blink;
+}
+-->
+</style>
+<scriptfunction disableRightClick(e)
+{
+  var message = "우측버튼을 사용 할수 없습니다.";
+  
+  if(!document.rightClickDisabled) // initialize
+  {
+    if(document.layers) 
+    {
+      document.captureEvents(Event.MOUSEDOWN);
+      document.onmousedown = disableRightClick;
+    }
+    else document.oncontextmenu = disableRightClick;
+    return document.rightClickDisabled = true;
+  }
+  if(document.layers || (document.getElementById && !document.all))
+  {
+    if (e.which==2||e.which==3)
+    {
+      alert(message);
+      return false;
+    }
+  }
+  else
+  {
+    alert(message);
+    return false;
+  }
+}
+disableRightClick();</head>
+
+<body>
+<p>
+  <style> 
+body { background-image:url("http://myhome.hanafos.com/~kj000304/5/6.gif");background-attachment: fixed;} table { background-color: transparent; } td { background-color: transparent; } 
+</style>
+</p>
+<table width="1012" height="829" border="0">
+  <tr>
+    <td width="200" height="143"><a href="/gallery/gaeul.jpg" target="_blank"><img src="gallery/gaeul_t.jpg" width="200" height="200" border="0"></a></td>
+    <td width="204">&nbsp;</td>
+    <td width="212"><a href="/gallery/gumsan.jpg" target="_blank"><img src="gallery/gumsan1_t.jpg" width="200" height="200" border="0"></a></td>
+    <td width="187">&nbsp;</td>
+    <td width="175"><a href="/gallery/gumsan1.jpg" target="_blank"><img src="gallery/gumsan_t.jpg" width="200" height="200" border="0"></a></td>
+  </tr>
+  <tr>
+    <td height="69"><div align="center" class="name">생각이 안나는 산의 정경 </div></td>
+    <td>&nbsp;</td>
+    <td><div align="center" class="name">남해 금산 </div></td>
+    <td>&nbsp;</td>
+    <td><div align="center" class="name">남해 금산 </div></td>
+  </tr>
+  <tr>
+    <td height="137">&nbsp;</td>
+    <td><a href="/gallery/pokpo.jpg" target="_blank"><img src="gallery/pokpo_t.jpg" width="200" height="200" border="0"></a></td>
+    <td>&nbsp;</td>
+    <td><a href="/gallery/seolak.jpg" target="_blank"><img src="gallery/seolak_t.jpg" width="200" height="200" border="0"></a></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="61">&nbsp;</td>
+    <td><div align="center" class="name">포항 보경사 계곡 </div></td>
+    <td>&nbsp;</td>
+    <td><div align="center" class="name">설악산</div></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="129"><a href="/gallery/ullung1.jpg" target="_blank"><img src="gallery/ullung1_t.jpg" width="200" height="200" border="0"></a></td>
+    <td>&nbsp;</td>
+    <td><a href="/gallery/pohang.jpg" target="_blank"><img src="gallery/pohang_t.jpg" width="200" height="200" border="0"></a></td>
+    <td>&nbsp;</td>
+    <td><a href="/gallery/ullung.jpg" target="_blank"><img src="gallery/ullung_t.jpg" width="200" height="200" border="0"></a></td>
+  </tr>
+  <tr>
+    <td height="71"><div align="center" class="name">울릉도</div></td>
+    <td><img src="images/danchu.gif" width="128" height="18" border="0" usemap="#Map"></td>
+    <td><div align="center" class="name">포항 보경사 계곡 </div></td>
+    <td>&nbsp;</td>
+    <td><div align="center" class="name">울릉도 성인봉에서 </div></td>
+  </tr>
+</table>
+<p>&nbsp; </p>
+<map name="Map">
+  <area shape="rect" coords="1,0,60,17" href="/index.html" target="_parent">
+  <area shape="rect" coords="73,0,132,18" href="/manframe.html" target="_parent">
+</map>
+</body>
+</html>
